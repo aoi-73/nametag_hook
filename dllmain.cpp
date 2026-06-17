@@ -6,8 +6,12 @@ typedef char(__fastcall* tAddNametagEntity)(__int64 a1, __int64 a2);
 tAddNametagEntity fnOriginalAddNametagEntity = nullptr;
 
 char __fastcall hkAddNametagEntity(__int64 a1, __int64 a2) {
-    // Aquí puedes meter tu lógica de análisis en el futuro
-    return fnOriginalAddNametagEntity(a1, a2);
+    if (a1 != 0) {
+    }
+
+    fnOriginalAddNametagEntity(a1, a2);
+
+    return 1;
 }
 
 // 3. Hilo principal de nuestra DLL
